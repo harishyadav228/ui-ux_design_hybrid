@@ -1,0 +1,16 @@
+:root {
+    /* Margin and Padding */
+    --spaceXXL: 48px;
+    --spaceXL: 32px;
+    --spaceLG: 24px;
+    --spaceMD: 16px;
+    --spaceSM: 8px;
+    --spaceXS: 4px;
+    /* Border Radius */
+    --roundXXL: 80px;
+    --roundXL: 64px;
+    --roundLG: 48px;
+    --roundMD: 16px;
+    --roundSM: 8px;
+    --roundXS: 4px;
+}

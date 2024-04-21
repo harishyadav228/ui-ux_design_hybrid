@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+
+h1{
+    position: fixed;
+    color: #fff;
+    background-color: #000;
+    font-size: 120px;
+    font-weight: 100;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    clip-path: circle(0% at top left);
+    animation: clip 0.5s ease-out 0.6s 2 alternate forwards;
+}
+
+
+@keyframes clip{
+    to{
+        clip-path: circle(150% at top left);
+    }
+}
+
+.storke-blue, .storke-yellow, .storke-red{
+
+    fill: none;
+    stroke-width: 600px;
+    stroke-linecap: square;
+    stroke-linejoin:round ;  
+    animation: loading 0.6s ease-out 2 alternate forwards; 
+}
+
+
+.storke-blue{
+ stroke: rgb(0, 0, 255);
+ stroke-dasharray: 2873.565673828125;
+ stroke-dashoffset: 2873.565673828125;
+ animation-delay: 0.2s
+}
+
+
+
+.storke-yellow{
+    stroke: rgb(255, 255, 0);
+    stroke-dasharray: 2873.565673828125;
+    stroke-dashoffset: 2873.565673828125;
+    animation-delay: 0.4s;
+   }
+
+
+.storke-red{
+    stroke: rgb(255, 0, 0);
+    stroke-dasharray: 2820.33447265625;
+    stroke-dashoffset: 2820.33447265625;
+    animation-delay: 0.6s;
+   }
+
+   @keyframes loading {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

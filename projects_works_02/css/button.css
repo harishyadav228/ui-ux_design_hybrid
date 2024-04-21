@@ -1,0 +1,24 @@
+button {
+    background: var(--accent);
+    outline: none;
+    border: none;
+    padding: var(--spaceMD) var(--spaceLG);
+    color: var(--negative);
+    cursor: pointer;
+    border-radius: var(--roundLG);
+    font-weight: var(--bold);
+    transform: scale(1);
+    text-transform: lowercase;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--accentHover);
+    color: var(--dark);
+}
+
+@media (max-width: 576px) {
+    button {
+        width: 100%;
+    }
+}

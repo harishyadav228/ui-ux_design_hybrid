@@ -1,0 +1,18 @@
+:root {
+    /* Color Palette */
+    --primary: #E8C084;
+    --primaryHover: #C7783A;
+    --text: #393a36;
+    --negative: #ffffff;
+    --lightGradient: linear-gradient(180deg, #FFC46B 0%, #E8C084 100%);
+    --darkGradient: linear-gradient(180deg, #B35209 0%, #F47E24 100%);;
+    --shadow: #3F2006;
+    --dark: #2C170B;
+    --highlight: #B28D71;
+    --light: #dad3c8;
+    --accent: #F37602;
+    --accentHover: #fec590;
+    /* Box Shadow */
+    --shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    --shadowHover: 0 0 20px 10px rgba(0, 0, 0, 0.15);
+}

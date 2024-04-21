@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: hsl(30, 80%, 70%);
+    --accent: hsl(240, 100%, 50%);
+    --negative: hsl(0, 0%, 100%);
+    --shadow: hsl(0, 0%, 0%);
+}
+
+
+body{
+width: 100%;
+height: 100vh;
+overflow: hidden;
+background-color: var(--negative);
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: var(--shadow);
+}
+
+nav{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: circle(0% at top left);
+    transition: all 0.4s ease-out 0.4s;
+}
+
+
+nav a{
+    margin-right:20px ;
+    font-size: 48px;
+    font-weight: 900;
+    transition: all 0.2s ease-out;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+.nav-active{
+    clip-path: circle(150% at top left);
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: -1;
+    pointer-events: none;
+}
+
+main section{
+    width: 25%;
+    background-color: var(--primary);
+    display: none;
+}
+
+.closed {
+    transform: rotateY(0);
+    animation: close 0.4s ease-out alternate forwards;
+}
+
+@keyframes close {
+    to {
+        transform: rotateY(90deg);
+    }
+}
+
+.rotate-active {
+    transform: rotateY(90deg);
+    animation: rotate 0.4s ease-out alternate forwards;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotateY(0);
+    }
+}
+
+
+
+main section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+main section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+main section:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.top, .middle, .bottom {
+    fill: none;
+    stroke: #000;
+    stroke-width: 15px;
+    transition: all 0.4s ease-out;
+}
+
+
+.top-active {
+    transform-origin: left;
+    transform: translate(6px, 4px) rotate(405deg);
+}
+
+.middle-active {
+    transform-origin: left;
+    transform: translateX(-200px);
+}
+
+.bottom-active {
+    transform-origin: right;
+    transform: translate(10px, -40px) rotate(-405deg);
+}
